@@ -99,10 +99,10 @@ class App extends Component {
             {this.sortTableData().map(framework =>{
               return(
                 <tr key={framework.id}>
-                  <td>{framework.name}</td>
-                  <td>{framework.open_issues_count}</td>
-                  <td>{framework.stargazers_count}</td>
-                  <td>{framework.forks_count}</td>
+                   <td>{framework.name}</td>
+                  {comparisonAttributesList.map(attribute =>{
+                    return (<td>{framework[attribute.nameinAPIResponce]}</td>)
+                  })}
                 </tr>
               )
             })}
@@ -114,29 +114,3 @@ class App extends Component {
 }
 
 export default App;
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
