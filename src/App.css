@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.table-header {
+  background-color: rgb(224, 219, 219);
 }
 
 .App-logo {
